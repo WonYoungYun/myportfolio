@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { library } from '@fortawesome/fontawesome-svg-core';
 
-import { faPhone, faUser, faEnvelope, } from '@fortawesome/free-solid-svg-icons';
+import { faPhone, faBirthdayCake, faEnvelope, faStar } from '@fortawesome/free-solid-svg-icons';
 
 import Header from './components/Header';
 import Section from './components/Section';
@@ -9,7 +9,7 @@ import Footer from './components/Footer';
 import GlobalStyles from './components/GlobalStyles';
 
 
-library.add(faPhone, faUser, faEnvelope)
+library.add(faPhone, faBirthdayCake, faEnvelope, faStar)
 
 class App extends Component {
   render() {

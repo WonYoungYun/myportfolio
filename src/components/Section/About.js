@@ -5,9 +5,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 const Container = styled.div`
-    width: 1000px;
+    width: 1200px;
     margin: 0 auto;
-    padding: 80px 0;
+    padding: 80px 0 ;
     
 `;
 
@@ -17,7 +17,7 @@ const Title = styled.h2`
     color: #27ae60;
 `;
 const Content = styled.div`
-    margin-top: 80px;
+    margin: 80px 0 ;
     text-align:center;
 `;
 
@@ -88,7 +88,7 @@ const ItemLink = styled.a`
 
 const MyIntro = styled.div`
     margin-top: 50px;
-    font-size:18px;
+    font-size:20px;
     padding: 0 30px;
     line-height: 1.75;
     
@@ -106,7 +106,7 @@ export default () => (
                     <ProfileDetail>
                         <ProfileItem>
                             <ItemIcon>
-                                <FontAwesomeIcon icon="user" size="2x" />
+                                <FontAwesomeIcon icon="birthday-cake" size="2x" />
                             </ItemIcon>
                             <Itemtxt>
                                 <ItemTitle>Birthday : </ItemTitle>
@@ -147,7 +147,7 @@ export default () => (
                 </ProfileText>
             </Profile>
             <MyIntro>
-                <div>안녕하세요. 웹을 그리는 것에 재미를 느껴 프론트엔드 개발자의 길을 걸었습니다.<br /> 계속 발전하는 기술의 흐름 속에서 그것에 적응하고 더 좋은 개발자가 되고 싶어 달려가고 있습니다.<br />호기심 많은 노력가 입니다! 저에 대해 궁금하신 점이 있다면, 위의 연락처로 연락주세요!</div>
+                <div>안녕하세요. 웹을 코딩을 통해 그리는 것에 재미를 느껴 프론트엔드 개발자의 길을 걸었습니다.<br />발전하는 기술의 흐름 속에서, 그것에 적응하고 더 좋은 개발자가 되고 싶어 달려가고 있습니다.<br />호기심 많은 노력가 입니다! 저에 대해 궁금하신 점이 있다면, 위의 연락처로 연락주세요!</div>
             </MyIntro>
         </Content>
     </Container>

@@ -2,12 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Footer = styled.footer`
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    text-align:center;
+    padding-top: 20px;
     width: 100%;
     height: 100px;
     background-color:#1E1E1E;
+    line-height:2;
+    color: #aaa;
 `;
 
 const Copyright = styled.p`
@@ -18,6 +19,5 @@ const Copyright = styled.p`
 export default () => (
     <Footer>
         <Copyright>© 2019 Copyright <span style={{ color: "#ddd" }}>WonYoung_Yun</span></Copyright>
-    </Footer >
-
+    </Footer>
 )

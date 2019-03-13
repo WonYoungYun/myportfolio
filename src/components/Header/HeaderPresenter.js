@@ -59,7 +59,7 @@ const Link = styled.a`
 `;
 
 
-export default ({ pos, home, about }) => (
+export default ({ pos, home, about, skill }) => (
 
     <Header current={pos > 0}>
         <HeaderWrap>
@@ -76,8 +76,8 @@ export default ({ pos, home, about }) => (
                 <Item current={pos >= about.top && pos <= about.bottom}>
                     <Link href="#About">About</Link>
                 </Item>
-                <Item>
-                    <Link href="#Skills">Skills</Link>
+                <Item current={pos >= skill.top && pos <= skill.bottom}>
+                    <Link href="#Skill">Skill</Link>
                 </Item>
                 <Item>
                     <Link href="#Project">Project</Link>
