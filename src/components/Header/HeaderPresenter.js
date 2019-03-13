@@ -36,16 +36,17 @@ const NavList = styled.ul`
 `;
 
 const Item = styled.li`
-    width:80px;
+    width:90px;
     height:100%;
     border-bottom: 3px solid ${props => props.current ? "#27ae60" : "transparent"};
     transition: border-bottom .2s ease-in;
     &:hover{
         border-bottom:3px solid #27ae60;
     }
-    &:not(:last-child){
+    margin-right: 20px;
+    /* &:not(:last-child){
         margin-right: 20px;
-    }
+    } */
 
 `;
 
@@ -59,7 +60,7 @@ const Link = styled.a`
 
 export default ({ pos, home }) => (
 
-    <Header current={pos > 100}>
+    <Header current={pos > 0}>
         <HeaderWrap>
             <Logo>
                 <span style={{ color: "#27ae60" }}>Won</span>Young
@@ -79,9 +80,6 @@ export default ({ pos, home }) => (
                 </Item>
                 <Item>
                     <Link href="#Project">Project</Link>
-                </Item>
-                <Item>
-                    <Link href="#Contact">Contact</Link>
                 </Item>
             </NavList>
         </HeaderWrap>
