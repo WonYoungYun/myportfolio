@@ -7,7 +7,8 @@ const Header = styled.header`
     padding: 0 100px;
     background-color: ${props => props.current ? "#fff" : "transparent"};
     transition: all .2s linear;
-    box-shadow: ${props => props.current ? "0px 1px 5px 2px rgba(200,200,200, 0.8)" : "none"}
+    box-shadow: ${props => props.current ? "0px 1px 5px 2px rgba(200,200,200, 0.8)" : "none"};
+    z-index:9999;
 
 `;
 

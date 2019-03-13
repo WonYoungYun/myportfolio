@@ -1,8 +1,13 @@
 import React from 'react';
+import styled from 'styled-components';
 import Home from './Home';
 
+const Container = styled.div`
+    
+`;
+
 export default () => (
-    <div style={{ height: "2000px" }}>
+    <Container>
         <Home />
-    </div>
+    </Container>
 );
