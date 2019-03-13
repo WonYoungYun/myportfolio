@@ -6,7 +6,7 @@ const Header = styled.header`
     width:100%;
     padding: 0 100px;
     background-color: ${props => props.current ? "#fff" : "transparent"};
-    transition: all .2s linear;
+    transition: all .1s linear;
     box-shadow: ${props => props.current ? "0px 1px 5px 2px rgba(200,200,200, 0.8)" : "none"};
     z-index:9999;
 
@@ -42,7 +42,7 @@ const Item = styled.li`
     border-bottom: 3px solid ${props => props.current ? "#27ae60" : "transparent"};
     transition: border-bottom .2s ease-in;
     &:hover{
-        border-bottom:3px solid #27ae60;
+        color: #aaa;
     }
     margin-right: 20px;
     /* &:not(:last-child){
@@ -59,7 +59,7 @@ const Link = styled.a`
 `;
 
 
-export default ({ pos, home }) => (
+export default ({ pos, home, about }) => (
 
     <Header current={pos > 0}>
         <HeaderWrap>
@@ -73,7 +73,7 @@ export default ({ pos, home }) => (
                 <Item current={pos >= home.top && pos <= home.bottom}>
                     <Link href="#Home">Home</Link>
                 </Item>
-                <Item>
+                <Item current={pos >= about.top && pos <= about.bottom}>
                     <Link href="#About">About</Link>
                 </Item>
                 <Item>

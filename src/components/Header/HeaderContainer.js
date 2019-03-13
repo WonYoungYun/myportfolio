@@ -9,6 +9,10 @@ class HeaderContainer extends Component {
             top: 0,
             bottom: 0,
         },
+        about: {
+            top: 0,
+            bottom: 0,
+        }
     }
 
 
@@ -20,9 +24,11 @@ class HeaderContainer extends Component {
     }
 
     calcElement() {
-        const Home = document.getElementById('Home')
+        const Home = document.getElementById('Home');
+        const About = document.getElementById('About');
         this.setState({
-            home: { top: Home.offsetTop, bottom: Home.offsetTop + Home.offsetHeight }
+            home: { top: Home.offsetTop, bottom: Home.offsetTop + Home.offsetHeight - 80 },
+            about: { top: About.offsetTop - 80, bottom: About.offsetTop + About.offsetHeight - 80 }
         })
     }
 
@@ -35,8 +41,8 @@ class HeaderContainer extends Component {
     }
 
     render() {
-        const { pos, home } = this.state;
-        return <HeaderPresenter pos={pos} home={home} />
+        const { pos, home, about } = this.state;
+        return <HeaderPresenter pos={pos} home={home} about={about} />
     }
 }
 

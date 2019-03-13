@@ -24,7 +24,6 @@ const Background = styled.div`
     background-image: url(${img});
     background-position: center center;
     background-size: cover;
-    background-attachment: fixed;
     filter: blur(3px);
     opacity: 0.5;
 `;
@@ -45,7 +44,7 @@ const Title = styled.h2`
 const SubTitle = styled.h3`
     font-size: 68px;
     font-weight:600;
-    color:rgba(20,20,20, .7);
+    color:rgba(20,20,20, .6);
     white-space: nowrap;
 `;
 
@@ -59,7 +58,7 @@ export default () => (
         <Background />
         <TitleContainer>
             <Title>안녕하세요!</Title>
-            <SubTitle>윤<span style={{ color: "#27ae60" }}>원</span>영 입니다.</SubTitle>
+            <SubTitle>제 이름은 윤<span style={{ color: "#000" }}>원</span>영 입니다.</SubTitle>
             <SubTitle>저는 <span style={{ color: "#3498db" }}>프론트엔드</span> 개발자입니다<Underbar>_</Underbar></SubTitle>
         </TitleContainer>
     </Container>

@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
+import { library } from '@fortawesome/fontawesome-svg-core';
+
+import { faPhone, faUser, faEnvelope, } from '@fortawesome/free-solid-svg-icons';
+
 import Header from './components/Header';
 import Section from './components/Section';
 import Footer from './components/Footer';
 import GlobalStyles from './components/GlobalStyles';
+
+
+library.add(faPhone, faUser, faEnvelope)
 
 class App extends Component {
   render() {
