@@ -66,12 +66,42 @@ class SkillContainer extends Component {
                 lv: 2,
                 txt: "Git의 기본 명령어를 학습하고 현재 활용하고 있습니다."
             },
-        ]
+        ],
+        slideCounter: 0
+    }
+
+    increaseCounter = () => {
+        const { slideCounter, data } = this.state;
+        slideCounter === data.length - 1 ?
+            this.setState({
+                slideCounter: 0,
+            }) :
+            this.setState({
+                slideCounter: slideCounter + 1,
+            })
+    }
+
+    decreaseCounter = () => {
+        const { slideCounter, data } = this.state;
+        slideCounter === 0 ?
+            this.setState({
+                slideCounter: data.length - 1
+            }) :
+            this.setState({
+                slideCounter: slideCounter - 1,
+            })
     }
 
     render() {
-        const { data } = this.state;
-        return <SkillPresenter data={data} />
+        const { data, slideCounter } = this.state;
+        return (
+            <SkillPresenter
+                data={data}
+                slideCounter={slideCounter}
+                increaseCounter={this.increaseCounter}
+                decreaseCounter={this.decreaseCounter}
+            />
+        )
     }
 }
 

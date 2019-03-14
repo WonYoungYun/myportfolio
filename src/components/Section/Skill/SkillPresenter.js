@@ -29,6 +29,10 @@ const Content = styled.div`
     display:flex;
     align-items:center;
     justify-content:center;
+    @media(max-width: 743px) {
+        display:block;
+        text-align:center;
+    }
 `;
 const SkillList = styled.ul`
   display: grid;
@@ -38,7 +42,7 @@ const SkillList = styled.ul`
         grid-template-columns: repeat(2, 320px);
     }
     @media(max-width: 743px) {
-        grid-template-columns: repeat(1, 320px);
+        display:block;
     }
 `;
 
@@ -82,7 +86,10 @@ const SkillCard = styled.li`
     &:hover:after{
         right:0%;
     }
-
+    @media(max-width: 743px) {
+        display:${props => props.current ? "block" : "none"};
+        margin: 0 auto;
+    }
 `;
 const CardImg = styled.img`
     width: 80px;
@@ -108,21 +115,61 @@ const Cardtxt = styled.p`
     line-height:1.5;
 `;
 
-export default ({ data }) => (
+const SlideArea = styled.div`
+    display:none;
+    @media(max-width: 743px) {
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+    }
+    
+`;
+
+const SlideButton = styled.button`
+    width: 60px;
+    height: 60px;
+    margin-top: 25px;
+    background: none;
+    border:none;
+    border-radius: 50%;
+    outline:none;
+    cursor:pointer;
+    &:hover, &:focus{
+        color: #a9a9a9;
+    }
+`;
+
+const SlidePage = styled.span`
+    font-size: 1rem;
+    font-weight:700;
+    letter-spacing:3px;
+`;
+
+export default ({ data, slideCounter, increaseCounter, decreaseCounter }) => (
     <Container id="Skill">
         <ContentWrap>
             <Title>Skill</Title>
             <Content>
                 <SkillList>
-                    {data.map(e => (
-                        <SkillCard key={e.skill}>
-                            <CardImg src={e.img} alt={e.skill} />
+                    {data.map((e, idx) => (
+                        <SkillCard key={e.skill} current={slideCounter === idx}>
+                            {console.log(slideCounter === idx)}
+                            < CardImg src={e.img} alt={e.skill} />
                             <CardTitle>{e.skill}</CardTitle>
                             <CardStar>{Array(e.lv).fill(1).map((e, idx) => <FontAwesomeIcon icon="star" color="#f1c40f" key={idx} />)}</CardStar>
                             <Cardtxt>{e.txt}</Cardtxt>
                         </SkillCard>)
                     )}
                 </SkillList>
+                <SlideArea>
+                    <SlideButton onClick={decreaseCounter}>
+                        <FontAwesomeIcon icon="arrow-left" size="2x" />
+                    </SlideButton>
+                    <SlidePage>{slideCounter + 1}/{data.length}</SlidePage>
+                    <SlideButton onClick={increaseCounter}>
+                        <FontAwesomeIcon icon="arrow-right" size="2x" />
+                    </SlideButton>
+                </SlideArea>
             </Content>
         </ContentWrap>
     </Container>
