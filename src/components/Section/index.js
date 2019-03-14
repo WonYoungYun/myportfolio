@@ -3,9 +3,10 @@ import styled from 'styled-components';
 import Home from './Home';
 import About from './About';
 import Skill from './Skill';
+import Project from './Projects';
 
 
-const Container = styled.div`
+const Container = styled.section`
 
 `;
 
@@ -14,5 +15,6 @@ export default () => (
         <Home />
         <About />
         <Skill />
+        <Project />
     </Container>
 );

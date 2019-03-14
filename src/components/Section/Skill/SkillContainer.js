@@ -41,7 +41,7 @@ class SkillContainer extends Component {
                 skill: "React.js",
                 img: REACTIMG,
                 lv: 2,
-                txt: "State와 Props, 라이프사이클, Router 등을 학습하였습니다."
+                txt: "Virtual DOM, State와 Props, 라이프사이클, Router 등을 학습하였습니다."
             },
             {
                 skill: "Vue.js",
@@ -53,13 +53,13 @@ class SkillContainer extends Component {
                 skill: "Node.js",
                 img: NODEIMG,
                 lv: 2,
-                txt: "Node.js를 통한 백엔드 구성 방법과, 프레임워크인 Express도 학습하였습니다."
+                txt: "Node.js를 통한 백엔드 구성 방법과, 프레임워크인 Express를 학습하여 간단한 API서버를 만들 수 있습니다."
             },
             {
                 skill: "MongoDB",
                 img: MONGOIMG,
                 lv: 2,
-                txt: "NoSQL DBMS를 학습하고, mongoose를 통한 Node연동을 학습하였습니다. "
+                txt: "NoSQL DBMS와, Node.js 연동을 위한 Mongoose를 학습하였습니다. "
             }, {
                 skill: "Git",
                 img: GITIMG,

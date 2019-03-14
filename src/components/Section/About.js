@@ -4,7 +4,7 @@ import PROFILE from '../../assets/Profile.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
-const Container = styled.section`
+const Container = styled.article`
     width: 1200px;
     margin: 0 auto;
     padding: 80px 0 ;

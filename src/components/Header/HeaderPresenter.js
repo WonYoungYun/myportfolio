@@ -45,9 +45,6 @@ const Item = styled.li`
         color: #aaa;
     }
     margin-right: 20px;
-    /* &:not(:last-child){
-        margin-right: 20px;
-    } */
 
 `;
 
@@ -59,7 +56,7 @@ const Link = styled.a`
 `;
 
 
-export default ({ pos, home, about, skill }) => (
+export default ({ pos, home, about, skill, project }) => (
 
     <Header current={pos > 0}>
         <HeaderWrap>
@@ -68,7 +65,6 @@ export default ({ pos, home, about, skill }) => (
             </Logo>
 
             <Button>모바일용 버튼</Button>
-
             <NavList>
                 <Item current={pos >= home.top && pos <= home.bottom}>
                     <Link href="#Home">Home</Link>
@@ -79,7 +75,7 @@ export default ({ pos, home, about, skill }) => (
                 <Item current={pos >= skill.top && pos <= skill.bottom}>
                     <Link href="#Skill">Skill</Link>
                 </Item>
-                <Item>
+                <Item current={pos >= project.top && pos <= project.bottom}>
                     <Link href="#Project">Project</Link>
                 </Item>
             </NavList>

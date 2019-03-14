@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const Container = styled.section`
+const Container = styled.article`
     background-color: #ecf0f1;
 `;
 
@@ -15,7 +15,7 @@ const ContentWrap = styled.div`
 const Title = styled.h2`
     font-size: 48px;
     font-weight: 600;
-    color: #3498db;
+    color: #27ae60;
 `;
 
 const Content = styled.div`
@@ -37,6 +37,7 @@ const SkillCard = styled.li`
     height: 220px;
     padding-top:20px;
     background-color: #fff;
+    border-radius:3px;
     transition: box-shadow .2s linear;
     text-align:center;
     overflow:hidden;
@@ -90,7 +91,7 @@ const CardStar = styled.span`
 
 const Cardtxt = styled.p`
     margin-top:10px;
-    padding: 0 30px;
+    padding: 0 25px;
     font-size:12px;
     line-height:1.5;
 `;
