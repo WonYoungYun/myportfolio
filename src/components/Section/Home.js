@@ -16,6 +16,10 @@ const Container = styled.div`
     position:relative;
     width:100%;
     height:calc(100vh - 5rem) ;
+    @media(max-width: 994px){
+        height: 70vh;  
+    }
+
 
 `;
 const Background = styled.div`
@@ -34,18 +38,31 @@ const TitleContainer = styled.div`
     transform: translate( -50%, -50%);
     background: transparent -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0)) repeat scroll 0 0;
     line-height:1.5;
+    
 `;
 const Title = styled.h2`
-    font-size: 82px;
+    font-size: 5rem;
     font-weight:600;
     white-space:nowrap;
+    @media(min-width:540px) and (max-width: 994px){
+        font-size: 3rem;   
+    }
+    @media(max-width:540px){
+        font-size: 2.2rem;
+    }
     
 `;
 const SubTitle = styled.h3`
-    font-size: 68px;
+    font-size: 4rem;
     font-weight:600;
     color:rgba(20,20,20, .6);
     white-space: nowrap;
+    @media(min-width:540px) and (max-width: 994px){
+        font-size: 2rem;   
+    }
+    @media(max-width:540px){
+        font-size: 1.3rem;
+    }
 `;
 
 const Underbar = styled.span`

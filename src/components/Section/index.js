@@ -7,14 +7,18 @@ import Project from './Projects';
 
 
 const Container = styled.section`
-
+    width: 100%;
+    @media(max-width: 994px){
+        padding-top: 60px;
+    }
+    
 `;
 
 export default () => (
     <Container>
         <Home />
         <About />
-        <Skill />
-        <Project />
+        {/*<Skill />
+        <Project /> */}
     </Container>
 );

@@ -39,15 +39,15 @@ class HeaderContainer extends Component {
 
     calcElement() {
         const Home = document.getElementById('Home');
-        const About = document.getElementById('About');
-        const Skill = document.getElementById('Skill');
-        const Project = document.getElementById('Project');
-        this.setState({
-            home: { top: Home.offsetTop, bottom: Home.offsetTop + Home.offsetHeight - 80 },
-            about: { top: About.offsetTop - 80, bottom: About.offsetTop + About.offsetHeight - 80 },
-            skill: { top: Skill.offsetTop - 80, bottom: Skill.offsetTop + Skill.offsetHeight - 80 },
-            project: { top: Project.offsetTop - 80, bottom: Project.offsetTop + Project.offsetHeight - 80 }
-        })
+        // const About = document.getElementById('About');
+        // const Skill = document.getElementById('Skill');
+        // const Project = document.getElementById('Project');
+        // this.setState({
+        //     home: { top: Home.offsetTop, bottom: Home.offsetTop + Home.offsetHeight - 80 },
+        //     about: { top: About.offsetTop - 80, bottom: About.offsetTop + About.offsetHeight - 80 },
+        //     skill: { top: Skill.offsetTop - 80, bottom: Skill.offsetTop + Skill.offsetHeight - 80 },
+        //     project: { top: Project.offsetTop - 80, bottom: Project.offsetTop + Project.offsetHeight - 80 }
+        // })
     }
 
     componentDidMount() {

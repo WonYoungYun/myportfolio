@@ -7,7 +7,7 @@ const Container = styled.article`
 `;
 
 const ContentWrap = styled.div`
-    width: 1200px;
+
     padding: 80px 0;
     margin: 0 auto;
 `;
