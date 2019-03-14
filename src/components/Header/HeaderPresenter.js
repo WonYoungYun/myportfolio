@@ -79,8 +79,12 @@ const Item = styled.li`
         display:block;
         width: 100%;
         border-bottom: none;
-        background-color: rgba(20,20,20, .5);
+        background-color: rgba(20,20,20, .95);
         text-align:center;
+        &:hover{
+            color:#fff;
+            background-color: rgba(50,50,50, .95);
+        }
     }
 
 `;

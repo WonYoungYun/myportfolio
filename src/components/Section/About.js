@@ -8,13 +8,18 @@ const Container = styled.article`
     width: 1200px;
     margin: 0 auto;
     padding: 80px 0 ;
-    
+    @media(max-width: 994px){
+        width:100%;
+    }
 `;
 
 const Title = styled.h2`
-    font-size: 48px;
+    font-size: 3rem;
     font-weight: 600;
     color: #27ae60;
+    @media(max-width: 994px){
+        text-align:center;
+    }
 `;
 const Content = styled.div`
     margin: 80px 0 ;
@@ -25,11 +30,18 @@ const Profile = styled.div`
     display:flex;
     align-items:center;
     justify-content:center;
+    @media(max-width: 994px){
+        display:block;
+    }
 `;
 
 const ProfileText = styled.div`
     margin-left: 100px;
     text-align: left;
+    @media(max-width: 994px){
+        margin: 0;
+        text-align:center;
+    }
 `;
 
 const ProfileImg = styled.img`
@@ -39,20 +51,30 @@ const ProfileImg = styled.img`
 `;
 
 const ProfileTitle = styled.h3`
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
+
 `;
 
 const ProfileSubtitle = styled.p`
-    font-size: 18px;
+    font-size: 1.1rem;
     font-weight: 600;
     line-height:2;
+
 `;
 
 const ProfileDetail = styled.ul`
     margin-top: 10px;
-    font-size: 15px;
+    font-size: .8rem;
     font-weight:700;
+    @media(min-width:540px) and (max-width: 994px){
+        text-align:left;
+        padding-left: 100px;  
+    }
+    @media(max-width:540px){
+        text-align:left;
+        padding: 15px 0 0 10px;
+    }
     
 `;
 
@@ -64,7 +86,7 @@ const ProfileItem = styled.li`
 `;
 
 const ItemTitle = styled.h4`
-    font-size: 18px;
+    font-size: 1.2rem;
     color: #333;
 `;
 const ItemIcon = styled.span`
@@ -76,7 +98,11 @@ const ItemIcon = styled.span`
 `;
 const Itemtxt = styled.div`
     color: #aaa;
-    line-height:1.2;
+    line-height:1.4;
+    font-size: 1rem;
+    @media(max-width:540px){
+        font-size: .9rem;
+    }
 `;
 
 const ItemLink = styled.a`
@@ -88,10 +114,12 @@ const ItemLink = styled.a`
 
 const MyIntro = styled.div`
     margin-top: 50px;
-    font-size:20px;
+    font-size:1.25rem;
     padding: 0 30px;
     line-height: 1.75;
-    
+    @media(max-width:540px){
+        font-size: 1.1rem;
+    }
 `;
 
 export default () => (
