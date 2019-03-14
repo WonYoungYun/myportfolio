@@ -4,23 +4,15 @@ Web PortFolio
 나를 소개하는 포트폴리오
 
 
-Home
-About
-SKills
-Project
-Contact
+구성
+-
+- Home
+- About(내 소개)
+- Skill(나의 기술)
+- Project(나의 프로젝트)
 
 
-Header,
-    logo, 
+결과물
+-
 
-Footer,
-    copyright
-    본사이트는 리엑트로 만들어 졌습니다.
-
-Sidebar
-    해당문구진입시 불들어오기..
-    해당 헤더 위치와 내 스크롤 현재위치 비교..하고 같으면 활성화..
-
-
-media query
+[이곳](https://WonYoungYun.github.io/myportfolio)에서 결과물을 확인하실 수 있습니다.
