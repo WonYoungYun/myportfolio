@@ -12,7 +12,7 @@ const Header = styled.header`
 
 `;
 
-const HeaderWrap = styled.div`
+const HeaderWrap = styled.nav`
     display: flex;
     justify-content:space-between;
     height: 60px;
