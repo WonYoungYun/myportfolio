@@ -7,10 +7,11 @@ class ProjectContainer extends Component {
     state = {
         data: [
             {
-                id: "커뮤니티",
+                id: "모던 커뮤니티웹",
                 url: "http://윤원영.kr",
                 git: "https://github.com/WonYoungYun/vue-community",
                 txt: "MongoDB-Express-Vue로 만든 게시판",
+                pdf: "https://drive.google.com/file/d/1kGqXQgd6TCQ2KvDVSa8ALrozN4T21FGH/view",
                 img: CIMG
             },
             {

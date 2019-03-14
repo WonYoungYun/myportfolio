@@ -19,6 +19,6 @@ export default () => (
         <Home />
         <About />
         <Skill />
-        {/*<Project /> */}
+        <Project />
     </Container>
 );

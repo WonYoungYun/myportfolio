@@ -34,6 +34,8 @@ const Content = styled.div`
         text-align:center;
     }
 `;
+const Listwrap = styled.div``;
+
 const SkillList = styled.ul`
   display: grid;
   grid-template-columns: repeat(3, 320px);
@@ -50,7 +52,7 @@ const SkillList = styled.ul`
 const SkillCard = styled.li`
     position:relative;
     width: 320px;
-    height: 220px;
+    height: 240px;
     padding-top:20px;
     background-color: #fff;
     border-radius:3px;
@@ -103,7 +105,7 @@ const CardTitle = styled.h4`
 `;
 const CardStar = styled.span`
     display:block;
-    margin-top:5px;
+    margin-top:15px;
     
     
 `;
@@ -150,17 +152,18 @@ export default ({ data, slideCounter, increaseCounter, decreaseCounter }) => (
         <ContentWrap>
             <Title>Skill</Title>
             <Content>
-                <SkillList>
-                    {data.map((e, idx) => (
-                        <SkillCard key={e.skill} current={slideCounter === idx}>
-                            {console.log(slideCounter === idx)}
-                            < CardImg src={e.img} alt={e.skill} />
-                            <CardTitle>{e.skill}</CardTitle>
-                            <CardStar>{Array(e.lv).fill(1).map((e, idx) => <FontAwesomeIcon icon="star" color="#f1c40f" key={idx} />)}</CardStar>
-                            <Cardtxt>{e.txt}</Cardtxt>
-                        </SkillCard>)
-                    )}
-                </SkillList>
+                <Listwrap>
+                    <SkillList>
+                        {data.map((e, idx) => (
+                            <SkillCard key={e.skill} current={slideCounter === idx}>
+                                <CardImg src={e.img} alt={e.skill} />
+                                <CardTitle>{e.skill}</CardTitle>
+                                <CardStar>{Array(e.lv).fill(1).map((e, idx) => <FontAwesomeIcon icon="star" color="#f1c40f" key={idx} />)}</CardStar>
+                                <Cardtxt>{e.txt}</Cardtxt>
+                            </SkillCard>)
+                        )}
+                    </SkillList>
+                </Listwrap>
                 <SlideArea>
                     <SlideButton onClick={decreaseCounter}>
                         <FontAwesomeIcon icon="arrow-left" size="2x" />

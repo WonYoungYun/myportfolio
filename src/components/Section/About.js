@@ -18,6 +18,7 @@ const Title = styled.h2`
     font-weight: 600;
     color: #27ae60;
     @media(max-width: 994px){
+
         text-align:center;
     }
 `;
@@ -40,6 +41,7 @@ const ProfileText = styled.div`
     text-align: left;
     @media(max-width: 994px){
         margin: 0;
+        padding-top: 15px;
         text-align:center;
     }
 `;

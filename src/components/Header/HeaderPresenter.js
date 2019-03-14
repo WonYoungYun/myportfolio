@@ -37,7 +37,7 @@ const Button = styled.button`
     text-align:center;
     @media (max-width: 994px){
         display:block;
-        
+        z-index:2;
     }
 `;
 const Logo = styled.h1`
@@ -46,6 +46,7 @@ const Logo = styled.h1`
     height: 100%;
     @media (max-width: 994px){
         margin-left: 30px;
+        z-index:2;
     }
 `;
 
@@ -58,11 +59,11 @@ const NavList = styled.ul`
         display:block;
         position:absolute;
         width:100%;
-        top:100%;
-        right: ${props => props.current ? "0" : "-100%"};;
-        transition: right .3s ease-in;
+        top:${props => props.current ? "100%" : "-300%"};
+        left: 0;
+        transition: top .3s ease-in;
         line-height:3;
-        
+        z-index:0;
     }
 `;
 
@@ -96,6 +97,17 @@ const Link = styled.a`
     justify-content:center;
 `;
 
+const MobCover = styled.div`
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-color: rgb(20,20,20);
+    display:none;
+    z-index:1;
+    @media (max-width: 994px){
+        display:block;
+    }
+`;
 
 export default ({ pos, home, about, skill, project, toggleBtn, isClickList }) => (
 
@@ -104,7 +116,7 @@ export default ({ pos, home, about, skill, project, toggleBtn, isClickList }) =>
             <Logo>
                 <span style={{ color: "#27ae60" }}>Won</span>Young
             </Logo>
-
+            <MobCover />
             <Button onClick={toggleBtn}>{isClickList ? <FontAwesomeIcon icon="times" size="2x" /> : <FontAwesomeIcon icon="bars" size="2x" />} </Button>
             <NavList current={isClickList}>
                 <Item current={pos >= home.top && pos <= home.bottom}>
