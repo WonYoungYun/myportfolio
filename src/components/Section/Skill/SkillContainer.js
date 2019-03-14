@@ -41,13 +41,13 @@ class SkillContainer extends Component {
                 skill: "React.js",
                 img: REACTIMG,
                 lv: 2,
-                txt: "Virtual DOM, State와 Props, 라이프사이클, Router 등을 학습하였습니다."
+                txt: "Virtual DOM, State와 Props, 라이프사이클, Router 등을 학습하여 웹페이지를 구현할 수 있습니다."
             },
             {
                 skill: "Vue.js",
                 img: VUEIMG,
                 lv: 2,
-                txt: "data, methods, 등의 Vue의 기본과 상태관리인 Vuex를 학습하였습니다. "
+                txt: "data, methods, 등의 Vue의 기본과 상태관리인 Vuex를 학습하여 웹페이지를 구현할 수 있습니다. "
             },
             {
                 skill: "Node.js",

@@ -7,15 +7,21 @@ const Container = styled.article`
 `;
 
 const ContentWrap = styled.div`
-
+    width:1200px;
     padding: 80px 0;
     margin: 0 auto;
+    @media (max-width: 1219px) {
+        width: 100%;
+    }
 `;
 
 const Title = styled.h2`
-    font-size: 48px;
+    font-size: 3rem;
     font-weight: 600;
     color: #27ae60;
+    @media(max-width: 994px){
+        text-align:center;
+    }
 `;
 
 const Content = styled.div`
@@ -28,6 +34,12 @@ const SkillList = styled.ul`
   display: grid;
   grid-template-columns: repeat(3, 320px);
   grid-gap: 20px;
+  @media (max-width: 1219px) {
+        grid-template-columns: repeat(2, 320px);
+    }
+    @media(max-width: 743px) {
+        grid-template-columns: repeat(1, 320px);
+    }
 `;
 
 
@@ -79,7 +91,7 @@ const CardImg = styled.img`
 
 const CardTitle = styled.h4`
     margin-top:5px;
-    font-size:18px;
+    font-size:1.12rem;
     font-weight:600;
 `;
 const CardStar = styled.span`
@@ -92,7 +104,7 @@ const CardStar = styled.span`
 const Cardtxt = styled.p`
     margin-top:10px;
     padding: 0 25px;
-    font-size:12px;
+    font-size:0.9rem;
     line-height:1.5;
 `;
 
