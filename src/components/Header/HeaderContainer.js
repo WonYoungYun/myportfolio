@@ -20,9 +20,15 @@ class HeaderContainer extends Component {
         project: {
             top: 0,
             bottom: 0,
-        }
+        },
+        isClickList: false
     }
-
+    toggleBtn = () => {
+        const { isClickList } = this.state;
+        this.setState({
+            isClickList: !isClickList
+        })
+    }
 
     checkPos = () => {
         let bodyPos = window.scrollY;
@@ -53,8 +59,8 @@ class HeaderContainer extends Component {
     }
 
     render() {
-        const { pos, home, about, skill, project } = this.state;
-        return <HeaderPresenter pos={pos} home={home} about={about} skill={skill} project={project} />
+        const { pos, home, about, skill, project, isClickList } = this.state;
+        return <HeaderPresenter pos={pos} home={home} about={about} skill={skill} project={project} isClickList={isClickList} toggleBtn={this.toggleBtn} />
     }
 }
 
